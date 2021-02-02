@@ -12,14 +12,19 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
   @Override
   protected void configure(HttpSecurity httpSecurity) throws Exception {
 
+    //CUSTOM LOGIN FORM
+    httpSecurity.formLogin()
+      .loginPage("/MyLogin")
+      .loginProcessingUrl("/login");
+
+    //DISABLE CSRF
+    httpSecurity.csrf().disable();
+
     //SPECIFY ACCESS TO ENDPOINTS
     httpSecurity.authorizeRequests()
-      .antMatchers("/hello").hasRole("USER")
-      .antMatchers("/MyLogin").permitAll();                   //No log in (anonymous access)
-
-    //REDIRECT TO LOGIN FORM
-    httpSecurity.formLogin();
+      .antMatchers("/Hello").hasRole("USER");
 
   }
 
 }
+
