@@ -8,11 +8,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class MyController {
 
+  //===============================================================================
+  // MY LOGIN
+  //===============================================================================
   @RequestMapping("/MyLogin")
   public String myLogin() {
     return "MyLogin";
   }
 
+  //===============================================================================
+  // HELLO
+  //===============================================================================
   @ResponseBody
   @Secured("ROLE_USER")
   @RequestMapping("/Hello")

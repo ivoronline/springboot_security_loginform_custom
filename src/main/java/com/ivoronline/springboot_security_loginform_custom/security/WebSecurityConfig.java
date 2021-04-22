@@ -1,4 +1,4 @@
-package com.ivoronline.springboot_security_loginform_custom.config;
+package com.ivoronline.springboot_security_loginform_custom.security;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
