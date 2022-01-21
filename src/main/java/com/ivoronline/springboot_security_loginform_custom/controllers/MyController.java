@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class MyController {
 
   //===============================================================================
-  // MY LOGIN
+  // CUSTOM LOGIN FORM
   //===============================================================================
-  @RequestMapping("/MyLogin")
-  public String myLogin() {
-    return "MyLogin";
+  @RequestMapping("CustomLoginForm")
+  String customLoginForm() {
+    return "CustomLogin";
   }
 
   //===============================================================================
@@ -21,8 +21,8 @@ public class MyController {
   //===============================================================================
   @ResponseBody
   @Secured("ROLE_USER")
-  @RequestMapping("/Hello")
-  public String hello() {
+  @RequestMapping("Hello")
+  String hello() {
     return "Hello from Controller";
   }
 

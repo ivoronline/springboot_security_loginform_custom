@@ -9,12 +9,15 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @EnableGlobalMethodSecurity(securedEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
+  //===============================================================================
+  // CONFIGURE
+  //===============================================================================
   @Override
   protected void configure(HttpSecurity httpSecurity) throws Exception {
 
     //CUSTOM LOGIN FORM
     httpSecurity.formLogin()
-      .loginPage("/MyLogin")         //Custom  HTML Page for entering   Credentials
+      .loginPage("/CustomLoginForm") //Custom  HTML Page for entering   Credentials
       .loginProcessingUrl("/login"); //Default HTML Page for processing Credentials
 
     //DISABLE CSRF
