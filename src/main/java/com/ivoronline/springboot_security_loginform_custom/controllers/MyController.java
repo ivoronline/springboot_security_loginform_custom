@@ -11,9 +11,9 @@ public class MyController {
   //===============================================================================
   // CUSTOM LOGIN FORM
   //===============================================================================
-  @RequestMapping("CustomLoginForm")
-  String customLoginForm() {
-    return "CustomLogin";
+  @RequestMapping("CustomLoginEndpoint")
+  String customLoginEndpoint() {
+    return "CustomLoginForm";
   }
 
   //===============================================================================

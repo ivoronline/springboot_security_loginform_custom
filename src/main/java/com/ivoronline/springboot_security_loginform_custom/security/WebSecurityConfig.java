@@ -17,7 +17,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     //CUSTOM LOGIN FORM
     httpSecurity.formLogin()
-      .loginPage("/CustomLoginForm") //Custom  HTML Page for entering   Credentials
+      .loginPage("/CustomLoginEndpoint") //Custom  HTML Page for entering   Credentials
       .loginProcessingUrl("/login"); //Default HTML Page for processing Credentials
 
     //DISABLE CSRF
